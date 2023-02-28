@@ -49,6 +49,7 @@
     - Current max scheduled job count is 10, consider tuning, maybe set to website table rows count.
     - Service have simpliest possible migration tool. To provide smooth database scheme changes and versioning 
     separate migration tool can be used.
+    - There is no packaging. Deb, rpm, docker can be used.
     - To retrieve websites from table, service should be restarted. That can be changed to update tasks during runtime behavior.
     - There is no dependencies separation now (dev/prod) so unnecessary packages will be installed for runtime,
     poetry with separation to dev and prod packages can fit well here.
