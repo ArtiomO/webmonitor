@@ -26,8 +26,8 @@ class CheckResultPostgreRepository(AbstractRepository):
 
     async def save(self, instance: CheckResult):
         """Save instance to db."""
-
-        await db_pool.execute(check_result_save_query, (instance.to_db()))
+        saved_instance = db_pool.fetchval(check_result_save_query, (instance.to_db()))
+        await db_pool.fetchval(check_result_save_query, (instance.to_db()))
 
     async def get_list(self) -> tp.List[CheckResult]:
         """Retrieve list of CheckResult instances."""

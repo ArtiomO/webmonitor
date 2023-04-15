@@ -35,5 +35,12 @@ class Database:
 
         return result
 
+    async def fetchval(self, query: str):
+        async with self.connection_pool.acquire() as connection:
+            async with connection.transaction():
+                result = await connection.fetchval(query)
+
+        return result
+
 
 db_pool = Database()

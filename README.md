@@ -1,4 +1,4 @@
-# AIVEN challenge
+# Description
     
     Monitoring tool with ability to check specified hosts with interval frequency.
     And check http response for matching with provided regexp.
